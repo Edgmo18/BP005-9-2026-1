@@ -10,7 +10,7 @@
 
      suma = num1 + num2;
 
-     printf("La suma de %lf y %lf es: %lf\n", num1, num2, suma;
+     printf("La suma de %lf y %lf es: %lf\n", num1, num2, suma);
 
   return 0;
 

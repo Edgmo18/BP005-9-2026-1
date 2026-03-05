@@ -1,1 +1,14 @@
+#include<stdio.h>
 
+int main(){
+    int codigopuer = 1337;
+    //printf("Ingrese el código de la puerta.\n");
+    //scanf("%d" , &codigopuer)
+    if (codigopuer == 1337){
+        printf("Código correcto.\n La puerta se ha abierto.");
+    }
+    else {
+        printf("Código incorrecto.\n La puerta permanece cerrada.");
+    }
+    
+}

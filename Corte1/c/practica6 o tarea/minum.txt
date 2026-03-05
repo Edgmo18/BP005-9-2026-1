@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+int main(){
+    int minum;
+    printf("Ingrese un número del 1 al 10\n");
+    scanf("%d" , &minum);
+    if (minum > 0){
+        printf("El número es positivo\n");
+    }
+    else if (minum < 0){
+        printf("El número es negativo\n");
+    }
+    else {
+        printf("El valor es 0.\n");
+    }
+    
+}

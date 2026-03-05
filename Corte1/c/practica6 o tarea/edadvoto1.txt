@@ -1,0 +1,16 @@
+#include<stdio.h>
+
+int main(){
+    int edad;
+    int edadparavoto = 18;
+    
+    printf("Ingrese su edad\n");
+    scanf("%d" , &edad);
+    
+    if (edad >= edadparavoto){
+        printf("Tiene la edad para votar\n");
+    }    
+    else {
+       printf("No tiene la edad suficiente para votar.\n");
+    }
+}

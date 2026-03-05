@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdbool.h>
+
+int main() {
+    
+ int hora;
+ 
+     printf("Ingrese la hora en formato militar: ");
+     scanf("%d" , &hora);
+      
+      bool dedia = hora < 12;
+      bool detarde = hora < 18;
+      
+     if (dedia) {
+     printf("Buenos días.");
+   }
+     else if (detarde){
+      printf("Buenas tardes.");
+     }
+     else{
+       printf("Buenas noches.");
+   }
+   return 0;
+}

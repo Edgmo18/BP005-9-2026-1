@@ -3,7 +3,7 @@
 int main(){
     int edad;
     float promedio;
-    char inicial[10];
+    char inicial[2];
     char nombre[40];
     
     printf("Ingrese su nombre: ");
@@ -15,17 +15,17 @@ int main(){
     printf("Ingrese su promedio: ");
     scanf("%f", &promedio);
     
-    while (getchar() != '\n');
+    while (getchar() != '\n'); 
     
     printf("Ingrese la inicial de su apellido: ");
-    fgets(nombre, sizeof(nombre), stdin);
+    fgets(inicial, sizeof(inicial), stdin);
     //scanf(" %c", &inicial);
 
     printf("\nresumen de datos ingresados:\n");
     printf("Nombre: %s", nombre);
     printf("Edad: %d\n", edad);
     printf("Promedio: %.2f\n", promedio);
-    printf("Inicial del apellido:  %c\n", inicial);
+    printf("Inicial del apellido:  %s\n", inicial);
     
 return 0;
 }

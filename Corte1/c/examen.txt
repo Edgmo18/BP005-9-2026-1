@@ -58,7 +58,15 @@ int main(){
     promedio = (nota1 + nota2 + nota3) / 3;
     }
 
-    //if (codestu  si es par o impar 
+    // punto 3 
+ 
+    if (codestu % 2 == 0){ 
+       printf("El código es par\n");
+    } 
+    else{
+       printf("El codigo es impar\n");
+    }
+
   
    //punto 4
    if (promedio < 3.0){

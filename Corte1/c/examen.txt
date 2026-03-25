@@ -89,6 +89,7 @@ int main(){
        Printf("El estudiante puede ingresar al laboratorio\n");
     } 
 
+    printf("La edad del estudiante es: %d \n", edad);
     printf("El promedio del estudiante es: %lf \n", promedio);
 
 return 0; 

@@ -1,62 +1,92 @@
-#include<stdio.h>
+include<stdio.h>
 #include<stdbool.h>
 
 // int, float, double, char una variable tipo bool
 
 int main(){
     int codestu, edad, activa, carnet, lab, indu;
-    float nota1, nota2, nota3, matricu; 
+    float nota1, nota2, nota3, matricu, notas; 
     double promedio;
     char nombre[30];
     char inici[2];
 
-    printf("Ingrese el código del estudiante: "\n);
+    printf("BIENVENIDO AL PROGRAMA DE EDGAR\n \n");
+
+    printf("Ingrese el código del estudiante: \n");
     scanf("%d", &codestu);
 
-    printf("Ingrese el nombre del estudiante: "\n);
-    scanf("%f", &nombre);
+    printf("Ingrese el nombre del estudiante: \n");
+    scanf("%s", nombre);
 
-    printf("Ingrese la inicial del estudiante: "\n);
-    scanf("%f". &inici);  
+    printf("Ingrese la inicial del estudiante: \n");
+    scanf("%s", inici);  
 
-    printf("Ingrese la edad del estudiante: "\n);
+    printf("Ingrese la edad del estudiante: \n");
     scanf("%d", &edad);
 
-    printf("Ingrese la nota 1: "\n);
+    printf("Ingrese la nota 1: \n");
     scanf("%f", &nota1);
 
-    printf("Ingrese la nota 2: "\n);
+    printf("Ingrese la nota 2: \n");
     scanf("%f", &nota2);
 
-    printf("Ingrese la nota 3: "\n);
+    printf("Ingrese la nota 3: \n");
     scanf("%f", &nota3);
 
-    printf("Ingrese la nota 1: "\n);
-    scanf("%f", &nota);
-
-    printf("Ingrese el valor de la matricula o pago academico: "\n);
+    printf("Ingrese el valor de la matricula o pago academico: \n");
     scanf("%f", &matricu);
 
-    printf("¿ Tiene matricula activa ?: "\n);
+    printf("¿ Tiene matricula activa ?: \n");
     scanf("%d", &activa);
 
-    printf("¿Presento documento para carnet?"\n);
+    printf("¿Presento documento para carnet?\n");
     scanf("%d", &carnet);
   
-    printf("¿Aprobo la induccion del laboratorio?"\n);
+    printf("¿Aprobo la induccion del laboratorio?\n");
     scanf("%d", &indu);
 
-    printf("¿Es monitor de laboratorio?"\n);
+    printf("¿Es monitor de laboratorio?\n");
     scanf("%d", &lab);
 
-    
+    // punto 1 y 2
+    if ((nota1 < 0 || nota1 > 5) || (nota2 < 0 || nota2 > 5) || (nota3 < 0 || nota3 > 5)){
+        printf("Una o mas notas son invalidas.\n");
+    }
+    else{
+    printf("La nota es valida\n\n");
 
+    promedio = (nota1 + nota2 + nota3) / 3;
+    }
 
+    //if (codestu  si es par o impar 
+  
+   //punto 4
+   if (promedio < 3.0){
+            printf("Resultado: Reprobado.\n");
+        }
+        else if (promedio < 4.0){
+            printf("Resultado: Aprobado con desempeño aceptable.\n");
+        }
+        else if (promedio < 4.5){
+            printf("Resultado: Buen desempeño.\n");
+        }
+        else {
+            printf("Resultado: Excelente desempeno.\n");
+        } 
+    // Punto 5
+    if ((matricu != 1) || (activa != 1) || (carnet != 1) || (indu != 1) || (lab != 1)){
+      printf("El estudiante no puede ingresar al laboratorio");
+    } 
+    else{
+       Printf("El estudiante puede ingresar al laboratorio\n");
+    } 
 
-
+    printf("El promedio del estudiante es: %lf \n", promedio);
 
 return 0; 
 }
+
+    
 
 
     

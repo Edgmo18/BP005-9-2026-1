@@ -1,0 +1,62 @@
+#include<stdio.h>
+#include<stdbool.h>
+
+// int, float, double, char una variable tipo bool
+
+int main(){
+    int codestu, edad, activa, carnet, lab, indu;
+    float nota1, nota2, nota3, matricu; 
+    double promedio;
+    char nombre[30];
+    char inici[2];
+
+    printf("Ingrese el código del estudiante: "\n);
+    scanf("%d", &codestu);
+
+    printf("Ingrese el nombre del estudiante: "\n);
+    scanf("%f", &nombre);
+
+    printf("Ingrese la inicial del estudiante: "\n);
+    scanf("%f". &inici);  
+
+    printf("Ingrese la edad del estudiante: "\n);
+    scanf("%d", &edad);
+
+    printf("Ingrese la nota 1: "\n);
+    scanf("%f", &nota1);
+
+    printf("Ingrese la nota 2: "\n);
+    scanf("%f", &nota2);
+
+    printf("Ingrese la nota 3: "\n);
+    scanf("%f", &nota3);
+
+    printf("Ingrese la nota 1: "\n);
+    scanf("%f", &nota);
+
+    printf("Ingrese el valor de la matricula o pago academico: "\n);
+    scanf("%f", &matricu);
+
+    printf("¿ Tiene matricula activa ?: "\n);
+    scanf("%d", &activa);
+
+    printf("¿Presento documento para carnet?"\n);
+    scanf("%d", &carnet);
+  
+    printf("¿Aprobo la induccion del laboratorio?"\n);
+    scanf("%d", &indu);
+
+    printf("¿Es monitor de laboratorio?"\n);
+    scanf("%d", &lab);
+
+    
+
+
+
+
+
+return 0; 
+}
+
+
+    

@@ -7,23 +7,24 @@ int main(){
     int codestu, edad, activa, carnet, lab, indu, matricu;
     float nota1, nota2, nota3, notas; 
     double promedio;
-    char nombre[30];
+    char nombre[40];
     char inici[2];
-    
-    
     
     printf("BIENVENIDO AL PROGRAMA DE EDGAR\n \n");
 
-    printf("Ingrese el código del estudiante: \n");
+    printf("Ingrese el codigo del estudiante: \n");
     scanf("%d", &codestu);
 
+    while (getchar() != '\n'); 
+    
     printf("Ingrese el nombre del estudiante: \n");
     fgets(nombre, sizeof(nombre), stdin);
     
-    while (getchar() != '\n'); 
+
+    printf("Ingrese la inicial del apellido: \n");
+    scanf("%s", inici);  
     
-    printf("Ingrese la inicial del estudiante: \n");
-    scanf("%c", inici);  
+    while (getchar() != '\n'); 
 
     printf("Ingrese la edad del estudiante: \n");
     scanf("%d", &edad);
@@ -36,42 +37,50 @@ int main(){
 
     printf("Ingrese la nota 3: \n");
     scanf("%f", &nota3);
-
-    printf("Ingrese el valor de la matricula o pago academico: \n");
+    
+    //Punto 1 y 2
+    if ((nota1 < 0 || nota1 > 5) || (nota2 < 0 || nota2 > 5) || (nota3 < 0 || nota3 > 5)){
+        printf("Una o mas notas son invalidas, corregir.\n");
+        return 0;
+    }
+    else{
+    printf("\nLas notas son validas\n");
+    promedio = (nota1 + nota2 + nota3) / 3;
+    }
+        
+    printf("\nIngrese el valor de la matricula o pago academico: \n");
     scanf("%d", &matricu);
 
-    printf("¿ Tiene matricula activa ?: \n");
+    printf("Responda a las siguientes preguntas con 2 opciones de respuesta 0 = no, 1 = si: \n");
+
+    printf("Tiene matricula activa?: \n");
     scanf("%d", &activa);
 
-    printf("¿Presento documento para carnet?\n");
+    printf("Presento documento para carnet?: \n");
     scanf("%d", &carnet);
   
-    printf("¿Aprobo la induccion del laboratorio?\n");
+    printf("Aprobo la induccion del laboratorio?: \n");
     scanf("%d", &indu);
 
-    printf("¿Es monitor de laboratorio?\n");
+    printf("Es monitor de laboratorio?\n");
     scanf("%d", &lab);
 
     printf("\nEL RESUMEN DE LOS DATOS ES EL SIGUIENTE\n");
+    printf("\nEl nombre del estudiante es: %s", nombre);
+    printf("\nLa inicial del apellido es: %s\n", inici);
+    printf("La edad del estudiante es: %d\n", edad);
+    printf("El promedio del estudiante es: %lf\n", promedio);
+    printf("El valor de la matricula es: %d", matricu);
     
-    // punto 1 y 2
-    if ((nota1 < 0 || nota1 > 5) || (nota2 < 0 || nota2 > 5) || (nota3 < 0 || nota3 > 5)){
-        printf("Una o mas notas son invalidas.\n");
-    }
-    else{
-    printf("\nLa nota es valida\n");
-    promedio = (nota1 + nota2 + nota3) / 3;
-    }
 
     // punto 3 
     if (codestu % 2 == 0){ 
-       printf("El código %d es par\n", codestu);
+       printf("\nEl codigo del estudiante: %d es par\n", codestu);
     } 
     else{
-       printf("El codigo %d es impar\n", codestu);
+       printf("\nEl codigo del estudiante: %d es impar\n", codestu);
     }
 
-  
    //punto 4
    if(promedio < 3.0){
         printf("Desempeno academico: Reprobado.\n");
@@ -87,22 +96,15 @@ int main(){
     }
     
     // Punto 5
-    if ((matricu != 1) || (activa != 1) || (carnet != 1)){
+    if (activa != 1 || carnet != 1) {
       printf("\nEl estudiante no puede ingresar al laboratorio\n");
     } 
     else{
-       printf("El estudiante puede ingresar al laboratorio\n");
+    	if (indu == 1 || lab == 1){
+		   printf("El estudiante puede ingresar al laboratorio\n");
+	    }
     } 
     
-    printf("\nEl nombre del estudiante es: %s", nombre);
-    printf("\nLa edad del estudiante es: %d\n", edad);
-    printf("El promedio del estudiante es: %lf\n", promedio);
-    
-    //printf("El promedio del estudiante es: %lf\n", promedio);
-return 0; 
+return 0;
 }
-
-    
-
-
     

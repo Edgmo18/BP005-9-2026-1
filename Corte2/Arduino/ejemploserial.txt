@@ -1,0 +1,21 @@
+const int LED1 = 2;
+
+   void setup() {
+     pinMode(LED1, OUTPUT);
+     Serial.begin(115200);
+   }
+
+  void loop(){
+      int n = 3;
+
+      for (int i = 1; i <= n; i++){
+        digitalWrite(LED1, HIGH);
+        delay(250);
+
+        digitalWrite(LED1, LOW);
+        delay(250);
+      }
+
+      Serial.println("Secuencia completada.");
+      delay(2000);
+  } 

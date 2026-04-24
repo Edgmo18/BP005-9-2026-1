@@ -1,4 +1,4 @@
-include <stdio.h>
+#include <stdio.h>
 
 void analizar(int v[], int n, int *suma, int *mayor, int *menor){
      int i;

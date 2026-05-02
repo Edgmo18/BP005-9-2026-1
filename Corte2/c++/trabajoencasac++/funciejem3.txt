@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+float calculoPromedio(float n1, float n2, float n3);
+
+int main(){
+	
+	float nota1 = 4.3;
+	float nota2 = 4.5;
+	float nota3 = 2.9;
+	float promedio;
+	
+	promedio = calculoPromedio(nota1, nota2, nota3);
+	cout<<"El promedio es: "<<promedio<<endl;
+	return 0;
+}
+
+float calculoPromedio(float n1, float n2, float n3){
+	float promedio;
+	promedio = (n1 + n2 + n3)/ 3.0;
+	return promedio;
+}

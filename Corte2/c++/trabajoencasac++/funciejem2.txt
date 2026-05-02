@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+
+void calculoArea(float base, float altura);
+
+int main(){
+	float base = 6.0;
+	float altura = 4.5;
+	
+	calculoArea(base, altura);
+	return 0;
+}
+
+void calculoArea(float base, float altura){
+	float area;
+	
+	area = base*altura;
+	
+	cout<<"Base: "<<base<<endl;
+	cout<<"Altura: "<<altura<<endl;
+	cout<<"Area del rectangulo: "<<area<<endl;
+}
+

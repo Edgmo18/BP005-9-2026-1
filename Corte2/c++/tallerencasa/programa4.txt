@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+int potencia(int base, int exponente);
+
+int main(){
+    int base, exponente, resultado;
+    cout<<"Ingrese la base: "<<endl;
+    cin>> base;
+    cout<<"Ingrese el exponente: "<<endl;
+    cin>> exponente;
+    
+    resultado = potencia(base, exponente);
+    cout<<"El resultado de "<< base <<" a la potencia de "<< exponente <<
+    " es igual a: "<<resultado<<endl;
+	return 0;
+}
+
+
+int potencia(int base, int exponente){
+	int resultado=1;
+	for(int i = 1; i <= exponente; i++){
+		resultado = resultado * base;
+	} 
+	return resultado;
+}

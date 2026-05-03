@@ -1,0 +1,44 @@
+#include <iostream>
+using namespace std;
+
+int esAprobado(float nota);
+void mostrarMensaje(float nota, int resultado);
+
+
+int main(){
+    float nota;
+    int resultado;
+    cout<<"Ingrese la nota: "<<endl;
+    cin >> nota;
+    
+    mostrarMensaje(nota, resultado);
+    
+	return 0;
+}
+
+
+int esAprobado(float nota){
+	if (nota < 0.0 || nota > 5.0){
+		cout<<"La nota es invalida, intente de nuevo"<<endl;
+		exit(0);
+    }
+    else{
+	   if(nota < 3.0){
+	      return 0;
+	    }
+	    else{
+	      return 1;
+	    }
+    }
+}
+
+void mostrarMensaje(float nota, int resultado){
+	
+	resultado = esAprobado(nota);
+	if(resultado == 0){
+		cout<<"La nota "<< nota <<" no es aprobatoria."<<endl;
+	}
+	else{
+		cout<<"La nota "<< nota <<" es aprobatoria."<<endl;
+	}
+}

@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+float convertirFahrenheit(float celcius);
+
+int main(){
+    float celsius;
+    float fahrenheit;
+    
+    cout<<"Ingrese la temperatura en grados celsius: "<<endl;
+    cin >> celsius;  
+    
+    fahrenheit = convertirFahrenheit(celsius);
+    
+    cout<<"La temperatura en grados celsius ingresada es: "<<celsius<<endl;
+    cout<<"La temperatura en grados Fahrenheit es: "<< fahrenheit <<endl;
+	return 0;
+}
+
+float convertirFahrenheit(float celsius){
+	
+	float fahrenheit;
+	fahrenheit = (celsius * 1.8) + 32;
+	return fahrenheit;
+}

@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+float calcularArea(float base, float altura);
+float calcularPerimetro(float base, float altura);
+void mostrarResultados(float area, float perimetro);
+
+int main(){
+    float base, altura, area, perimetro;
+    
+    cout<<"Ingrese la base: "<<endl;
+    cin >> base;  
+    cout<<"ingrese la altura: "<<endl;
+    cin >> altura;
+    
+    area = calcularArea(base, altura);
+    perimetro = calcularPerimetro(base, altura);
+    
+    mostrarResultados(area, perimetro);
+    
+	return 0;
+}
+
+float calcularArea(float base, float altura){
+	float area;
+	area = base * altura;
+	return area;
+}
+
+float calcularPerimetro(float base, float altura){
+	float perimetro;
+	perimetro = (base + altura)*2;
+	return perimetro;
+}
+
+void mostrarResultados(float area, float perimetro){
+	cout<<"El area es: "<< area <<endl;
+	cout<<"El perimetro es: "<< perimetro <<endl;
+}
